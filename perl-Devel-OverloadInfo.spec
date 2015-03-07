@@ -6,6 +6,7 @@
 %define		pnam	OverloadInfo
 %include	/usr/lib/rpm/macros.perl
 Summary:	Devel::OverloadInfo - introspect overloaded operators
+Summary(pl.UTF-8):	Devel::OverloadInfo - obserwacja przeciążonych operatorów
 Name:		perl-Devel-OverloadInfo
 Version:	0.002
 Release:	1
@@ -15,12 +16,15 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Devel/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	bff186962739cd63d303061f2da038b1
 URL:		http://search.cpan.org/dist/Devel-OverloadInfo/
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.30
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl(Exporter) >= 5.57
 BuildRequires:	perl-MRO-Compat
 BuildRequires:	perl-Package-Stash >= 0.14
 BuildRequires:	perl-Sub-Identify
+BuildRequires:	perl-Test-Simple >= 0.88
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,6 +34,11 @@ Devel::OverloadInfo returns information about overloaded operators for
 a given class (or object), including where in the inheritance
 hierarchy the overloads are declared and where the code implementing
 it is.
+
+%description -l pl.UTF-8
+Devel::OverloadInfo zwraca informacje o przeciążonych operatorach dla
+danej klasy (lub obiektu), włącznie z umiejscowieniem deklaracji
+przeciążenia w hierarchii dziedziczenia oraz kodu z implementacją.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -54,4 +63,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/Devel/OverloadInfo.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Devel::OverloadInfo.3pm*
