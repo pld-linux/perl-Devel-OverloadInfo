@@ -8,13 +8,13 @@
 Summary:	Devel::OverloadInfo - introspect overloaded operators
 Summary(pl.UTF-8):	Devel::OverloadInfo - obserwacja przeciążonych operatorów
 Name:		perl-Devel-OverloadInfo
-Version:	0.004
+Version:	0.005
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Devel/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	97a27e31858b073daba54121d57be705
+# Source0-md5:	607b65dfe9fdb47df780f3b22dcb7917
 URL:		http://search.cpan.org/dist/Devel-OverloadInfo/
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.30
 BuildRequires:	perl-devel >= 1:5.8.0
