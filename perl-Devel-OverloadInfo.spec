@@ -4,7 +4,6 @@
 #
 %define		pdir	Devel
 %define		pnam	OverloadInfo
-%include	/usr/lib/rpm/macros.perl
 Summary:	Devel::OverloadInfo - introspect overloaded operators
 Summary(pl.UTF-8):	Devel::OverloadInfo - obserwacja przeciążonych operatorów
 Name:		perl-Devel-OverloadInfo
