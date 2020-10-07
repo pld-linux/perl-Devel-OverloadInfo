@@ -14,10 +14,11 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Devel/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	607b65dfe9fdb47df780f3b22dcb7917
-URL:		http://search.cpan.org/dist/Devel-OverloadInfo/
+URL:		https://metacpan.org/release/Devel-OverloadInfo
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.30
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl(Exporter) >= 5.57
 BuildRequires:	perl-MRO-Compat
